@@ -1,0 +1,35 @@
+{
+  "name": "todovue-css",
+  "version": "0.1.0",
+  "private": false,
+  "author": "Cristhian Daza",
+  "description": "Framework CSS demo created for the TodoVue blog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TODOvue/todovue-css.git"
+  },
+  "keywords": [
+    "todovue",
+    "front-end",
+    "web",
+    "vue",
+    "vuejs",
+    "vue-js"
+  ],
+  "bugs": {
+    "url": "https://github.com/todovue/todovue-css/issues"
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.1.0",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.60.0"
+  }
+}
