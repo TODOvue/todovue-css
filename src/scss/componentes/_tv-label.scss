@@ -1,0 +1,33 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+@import "../helpers/inheritance";
+
+.dark-mode {
+  .tv-label {
+    color: $color-text-dark;
+  }
+}
+
+.light-mode {
+  .tv-label {
+      color: $color-text-light;
+  }
+}
+
+.tv-label {
+  border-radius: 100px;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 4px 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  min-width: 50px;
+  text-align: center;
+
+  & i.tv-label-icon {
+    @extend %defaultIconBackground;
+    @include defaultIconSize(10px);
+  }
+}

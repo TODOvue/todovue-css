@@ -31,8 +31,11 @@
   white-space: nowrap;
 }
 
-@mixin defaultIcon($icon, $size) {
+@mixin defaultIcon($icon) {
   background-image: url($icon);
+}
+
+@mixin defaultIconSize($size) {
   width: $size;
   height: $size;
 }

@@ -28,3 +28,30 @@ h1, h2, h3, h4, h5, h6 {
     @include backgroundColorAndTextColor($color-background-body-light, $color-text-light);
   }
 }
+
+.tv-icon-position-left {
+  @include floatIcon(left, right, 8px);
+}
+
+.tv-icon-position-right {
+  @include floatIcon(right, left, 8px);
+}
+
+.tv-icon-add {
+  @include defaultIcon($icon-add);
+}
+.tv-icon-arrow-left {
+  @include defaultIcon($icon-arrow-left);
+}
+.tv-icon-arrow-right {
+  @include defaultIcon($icon-arrow-right);
+}
+.tv-icon-edit {
+  @include defaultIcon($icon-edit);
+}
+.tv-icon-remove {
+  @include defaultIcon($icon-remove);
+}
+.tv-icon-search {
+  @include defaultIcon($icon-search);
+}

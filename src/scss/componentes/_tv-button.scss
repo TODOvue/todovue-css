@@ -1,5 +1,6 @@
 @import "../helpers/variables";
 @import "../helpers/mixins";
+@import "../helpers/inheritance";
 
 .dark-mode {
   & .tv-btn {
@@ -27,36 +28,8 @@
   @include defaultButton();
 
   & i.tv-btn-icon {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    &-left {
-      @include floatIcon(left, right, 8px);
-    }
-
-    &-right {
-      @include floatIcon(right, left, 8px);
-    }
-
-    &.tv-btn-icon-add {
-      @include defaultIcon($icon-add, 18px);
-    }
-    &.tv-btn-icon-arrow-left {
-      @include defaultIcon($icon-arrow-left, 18px);
-    }
-    &.tv-btn-icon-arrow-right {
-      @include defaultIcon($icon-arrow-right, 18px);
-    }
-    &.tv-btn-icon-edit {
-      @include defaultIcon($icon-edit, 18px);
-    }
-    &.tv-btn-icon-remove {
-      @include defaultIcon($icon-remove, 18px);
-    }
-    &.tv-btn-icon-search {
-      @include defaultIcon($icon-search, 18px);
-    }
+    @extend %defaultIconBackground;
+    @include defaultIconSize(18px);
   }
 
   &:hover {
