@@ -15,7 +15,7 @@
 }
 
 .tv-label {
-  border-radius: 100px;
+  @include borderRadius(100px);
   display: inline-block;
   font-size: 10px;
   font-weight: 600;

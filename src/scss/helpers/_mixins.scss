@@ -87,3 +87,11 @@
   float: $direction;
   margin-#{$margin}: $number;
 }
+
+@mixin position($position) {
+  position: $position;
+}
+
+@mixin borderRadius($border-radius) {
+  border-radius: $border-radius;
+}

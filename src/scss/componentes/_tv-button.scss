@@ -77,11 +77,11 @@
   }
 
   &.tv-btn-full {
-    width: 100%;
+    @extend %widthFull;
   }
 
   &.tv-btn-rounded {
-    border-radius: 10px;
+    @include borderRadius(10px);
   }
 
   &.tv-btn-small {
