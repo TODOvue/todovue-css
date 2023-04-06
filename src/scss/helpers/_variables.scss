@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Lato:wght@300&display=swap');
+
+/*Dark Theme*/
+$color-background-body-dark: #7A7D7D;
+$color-background-button-dark: #EF233C;
+$color-background-card-dark: #0E131F;
+$color-text-button-dark: #AFDEDC;
+$color-text-dark: #F4FAFF;
+
+/*Light Theme*/
+$color-background-body-light: #E0E1E1;
+$color-background-button-light: #EF233C;
+$color-background-card-light: #B9C4DF;
+$color-text-button-light: #F1F9F9;
+$color-text-light: #000B14;
+
+/*Global*/
+$color-background-button-error: #EF233C;
+$color-background-button-info: #2F80ED;
+$color-background-button-success: #00600F;
+$color-background-button-warning: #F2C94C;
+$font-family-text: 'Lato', sans-serif;
+$font-family-title: 'Kanit', sans-serif;
+
+/*Icons*/
+$icon-add: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fadd.svg?alt=media&token=07d40390-af55-43c3-8657-a554c706014d';
+$icon-arrow-left: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Farrow-left.svg?alt=media&token=97801e52-9852-4e81-bcae-1bf4a90f5bc9';
+$icon-arrow-right: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Farrow-right.svg?alt=media&token=796c8b22-98a3-4afc-aaed-7e1fee5bf375';
+$icon-edit: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fedit.svg?alt=media&token=ca547c61-5601-43c8-bd8b-e50dc180fc35';
+$icon-remove: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fremove.svg?alt=media&token=c9f0ca74-329f-42c2-b849-462e6b36d98c';
+$icon-search: 'https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/icons%2Fsearch.svg?alt=media&token=422c9969-3c54-4dc6-90c0-6f5f38964db1';

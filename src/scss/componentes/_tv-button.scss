@@ -1,0 +1,148 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+
+.dark-mode {
+  & .tv-btn {
+    &-outlined {
+      color: $color-background-button-dark;
+      &:hover {
+        @include backgroundColorAndTextColor($color-background-button-dark, $color-text-button-dark);
+      }
+    }
+  }
+}
+
+.light-mode {
+  & .tv-btn {
+    &-outlined {
+      color: $color-background-button-light;
+      &:hover {
+        @include backgroundColorAndTextColor($color-background-button-light, $color-text-button-light);
+      }
+    }
+  }
+}
+
+.tv-btn {
+  @include defaultButton();
+
+  & i.tv-btn-icon {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &-left {
+      @include floatIcon(left, right, 8px);
+    }
+
+    &-right {
+      @include floatIcon(right, left, 8px);
+    }
+
+    &.tv-btn-icon-add {
+      @include defaultIcon($icon-add, 18px);
+    }
+    &.tv-btn-icon-arrow-left {
+      @include defaultIcon($icon-arrow-left, 18px);
+    }
+    &.tv-btn-icon-arrow-right {
+      @include defaultIcon($icon-arrow-right, 18px);
+    }
+    &.tv-btn-icon-edit {
+      @include defaultIcon($icon-edit, 18px);
+    }
+    &.tv-btn-icon-remove {
+      @include defaultIcon($icon-remove, 18px);
+    }
+    &.tv-btn-icon-search {
+      @include defaultIcon($icon-search, 18px);
+    }
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:active {
+    @include backgroundColorAndBoxShadow(darken($color-background-button-dark, 15%), 0 0 5px $color-background-button-dark);
+    transform: translateY(1px);
+  }
+
+  &.tv-btn-outlined {
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid $color-background-button-dark;
+
+    &.tv-btn-success {
+      @include backgroundColorAndTextColor(transparent, $color-background-button-success);
+      border: 2px solid $color-background-button-success;
+
+      &:hover {
+        @include backgroundColorAndTextColor($color-background-button-success, $color-text-button-dark);
+      }
+
+      &.tv-btn-disabled {
+        &:hover {
+          color: $color-background-button-success;
+        }
+      }
+    }
+
+    &.tv-btn-disabled {
+      &:hover {
+        @include backgroundColorAndTextColor(transparent, $color-background-button-dark);
+      }
+    }
+  }
+
+  &.tv-btn-success {
+    @include backgroundColorAndBoxShadow($color-background-button-success, 0 0 5px $color-background-button-success);
+
+    &:hover {
+      @include backgroundColorAndBoxShadow(darken($color-background-button-success, 10%), 0 0 5px darken($color-background-button-success, 10%));
+    }
+  }
+
+  &.tv-btn-full {
+    width: 100%;
+  }
+
+  &.tv-btn-rounded {
+    border-radius: 10px;
+  }
+
+  &.tv-btn-small {
+    @include buttonSize(80px, auto, 10px, 0.7rem 0.5rem);
+  }
+
+  &.tv-btn-large {
+    @include buttonSize(180px, auto, 16px, 1rem 1.5rem);
+  }
+
+  &.tv-btn-text {
+    @include buttonText(transparent, $color-background-button-dark);
+  }
+
+  &.tv-btn-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    box-shadow: none;
+
+    &:active {
+      transform: none;
+      background-color: $color-background-button-dark;
+    }
+  }
+
+  &.tv-btn-error {
+    @include typeButton($color-background-button-error, $color-text-button-light, $color-background-button-error);
+  }
+
+  &.tv-btn-warning {
+    @include typeButton($color-background-button-warning, $color-text-button-light, $color-background-button-warning);
+  }
+
+  &.tv-btn-info {
+    @include typeButton($color-background-button-info, $color-text-button-light, $color-background-button-info);
+  }
+}

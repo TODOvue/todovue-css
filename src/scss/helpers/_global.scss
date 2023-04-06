@@ -1,0 +1,30 @@
+@import "variables";
+@import 'mixins';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include fontFamilyAndFontSize($font-family-text, 1rem);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include fontFamilyAndFontSize($font-family-title, 2rem);
+}
+
+.dark-mode {
+  @include backgroundColorAndTextColor($color-background-body-dark, $color-text-dark);
+  & body {
+    @include backgroundColorAndTextColor($color-background-body-dark, $color-text-dark);
+  }
+}
+
+.light-mode {
+  @include backgroundColorAndTextColor($color-background-body-light, $color-text-light);
+  & body {
+    @include backgroundColorAndTextColor($color-background-body-light, $color-text-light);
+  }
+}
