@@ -22,7 +22,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-@mixin buttonSize($min-width, $width, $padding, $font-size) {
+@mixin buttonSize($min-width, $width, $font-size, $padding) {
   @include size(width, $width, wmin, $min-width);
   font-size: $font-size;
   padding: $padding;
