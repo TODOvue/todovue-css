@@ -12,8 +12,8 @@
 
 @mixin defaultButton() {
   @include backgroundColorAndTextColor($color-background-button-light, $color-text-button-light);
-  min-width: 100px;
-  width: auto;
+  @include size(width, 100px, min);
+  @include size(width, auto);
   border: none;
   padding: 0.8rem 1.2rem;
   cursor: pointer;
@@ -24,8 +24,8 @@
 }
 
 @mixin buttonSize($min-width, $width, $padding, $font-size) {
-  min-width: $min-width;
-  width: $width;
+  @include size(width, $min-width, min);
+  @include size(width, $width);
   font-size: $font-size;
   padding: $padding;
   white-space: nowrap;
@@ -36,8 +36,8 @@
 }
 
 @mixin defaultIconSize($size) {
-  width: $size;
-  height: $size;
+  @include size(width, $size);
+  @include size(height, $size);
 }
 
 @mixin buttonText($background, $color) {
@@ -94,4 +94,26 @@
 
 @mixin borderRadius($border-radius) {
   border-radius: $border-radius;
+}
+
+@mixin size($dimension, $size, $minmax: none) {
+  @if $dimension == width {
+    @if $minmax == min {
+      min-width: $size;
+    } @else if $minmax == max {
+      max-width: $size;
+    } @else {
+      width: $size;
+    }
+  } @else if $dimension == height {
+    @if $minmax == min {
+      min-height: $size;
+    } @else if $minmax == max {
+      max-height: $size;
+    } @else {
+      height: $size;
+    }
+  } @else {
+    @error "Invalid dimension specified. Please use 'width' or 'height'.";
+  }
 }

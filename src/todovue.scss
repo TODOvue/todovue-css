@@ -1,9 +1,11 @@
 // helpers
-@import 'scss/helpers/variables';
-@import 'scss/helpers/mixins';
 @import 'scss/helpers/global';
+@import 'scss/helpers/inheritance';
+@import 'scss/helpers/mixins';
+@import 'scss/helpers/variables';
 
 // components
 @import "scss/componentes/tv-button";
-@import "scss/componentes/tv-label";
 @import "scss/componentes/tv-card";
+@import "scss/componentes/tv-hero";
+@import "scss/componentes/tv-label";

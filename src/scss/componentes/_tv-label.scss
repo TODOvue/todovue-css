@@ -1,6 +1,6 @@
-@import "../helpers/variables";
-@import "../helpers/mixins";
 @import "../helpers/inheritance";
+@import "../helpers/mixins";
+@import "../helpers/variables";
 
 .dark-mode {
   .tv-label {
@@ -16,6 +16,7 @@
 
 .tv-label {
   @include borderRadius(100px);
+  @include size(width, 50px, min);
   display: inline-block;
   font-size: 10px;
   font-weight: 600;
@@ -23,7 +24,6 @@
   padding: 4px 8px;
   text-transform: uppercase;
   cursor: pointer;
-  min-width: 50px;
   text-align: center;
 
   & i.tv-label-icon {

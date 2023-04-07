@@ -1,0 +1,217 @@
+@import "../helpers/inheritance";
+@import "../helpers/mixins";
+@import "../helpers/variables";
+
+.dark-mode {
+  & .tv-hero-body {
+    @include backgroundColorAndTextColor($color-background-card-dark, $color-text-dark);
+
+    & .tv-hero-title {
+      &::after {
+        background: $color-text-button-light;
+        box-shadow: 0 0 10px 0 $color-text-button-dark;
+      }
+    }
+  }
+}
+
+.light-mode {
+  & .tv-hero-body {
+    @include backgroundColorAndTextColor($color-background-card-light, $color-text-light);
+
+    & .tv-hero-title {
+      &::after {
+        background: $color-text-button-dark;
+        box-shadow: 0 0 10px 0 $color-text-button-light;
+      }
+    }
+  }
+}
+
+.tv-hero-body {
+  @extend %alignCenterFlex;
+  @include size(width, 100%);
+  margin: 0 auto;
+  flex-direction: column;
+
+  & .tv-hero {
+    @include size(width, 90%);
+    @include size(width, 70%, max);
+    display: flex;
+    padding: 40px 0;
+
+    & .tv-hero-image {
+      @include size(width, 40%);
+      @extend %alignCenterFlex;
+      margin-right: 2rem;
+
+      & img {
+        @include size(width, 100%);
+      }
+    }
+
+    & .tv-hero-content {
+      @include size(width, 60%);
+      @extend %alignCenterFlex;
+      flex-direction: column;
+
+      & .tv-hero-title {
+        margin-bottom: 1.5rem;
+        text-align: center;
+
+        &::after {
+          @include size(width, 80%);
+          @include size(height, 3px);
+          content: "";
+          display: block;
+          margin: 1rem auto 0;
+        }
+      }
+
+      & .tv-hero-description {
+        margin-bottom: 1rem;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      & .tv-hero-actions {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+  }
+
+  &.tv-hero-entry {
+    display: flex;
+
+    & .tv-hero {
+      @include size(width, 100%);
+      @include size(width, 100%, max);
+      padding: 0;
+
+      & .tv-hero-content {
+        @include size(width, 100%);
+        padding: 10px 20px;
+
+        & .tv-hero-title::after {
+          display: none;
+        }
+
+        & .tv-hero-description {
+          order: 2;
+        }
+      }
+
+      & .tv-hero-image {
+        order: 1;
+        width: 800px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tv-hero-body {
+    & .tv-hero {
+      @include size(width, 90%);
+
+      & img {
+        @include size(width, 200px);
+      }
+
+      & .tv-hero-content {
+        & .tv-hero-title {
+          font-size: 14px;
+        }
+
+        & .tv-hero-description {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &.tv-hero-entry {
+      & .tv-hero {
+        & .tv-hero-image {
+          @include size(width, 100%);
+
+          & img {
+            @include size(width, 100%);
+          }
+        }
+
+        & .tv-hero-content {
+          & .tv-hero-description {
+            font-size: 12px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 612px) {
+  .tv-hero-body {
+    & .tv-hero {
+      @include size(width, 100%);
+      @include size(width, 100%, max);
+      flex-direction: column;
+      align-items: center;
+
+      & .tv-hero-image {
+        @include size(width, 60%);
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+
+      & .tv-hero-content {
+        @include size(width, 100%);
+
+        & .tv-hero-description {
+          padding: 10px 50px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .tv-hero-body {
+    & .tv-hero {
+      @include size(width, 100%);
+      padding: 20px 0 10px 0;
+
+      & .tv-hero-content {
+        & .tv-hero-title {
+          font-size: 12px;
+          padding: 0 10px;
+          margin: 0;
+        }
+
+        & .tv-hero-actions {
+          align-items: center;
+          flex-direction: column;
+          gap: 10px;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 325px) {
+  .tv-hero-body {
+    & .tv-hero {
+      & .tv-hero-content {
+        & .tv-hero-description {
+          margin: 0;
+          padding: 20px 10px;
+        }
+      }
+    }
+  }
+}
