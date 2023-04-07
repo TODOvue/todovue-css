@@ -1,0 +1,54 @@
+@import "../helpers/mixins";
+@import "../helpers/variables";
+
+.tv-demo-body {
+  @include size(height, 100vh, min);
+  @include size(width, 80%);
+  margin: 0 auto;
+
+  &.dark-mode {
+    background-color: $color-background-card-dark;
+  }
+
+  &.invert-dark-mode {
+    background-color: $color-background-card-light;
+  }
+
+  &.light-mode {
+    background-color: $color-background-card-light;
+  }
+
+  &.invert-light-mode {
+    background-color: $color-background-card-dark;
+  }
+
+  &-theme {
+    @include size(height, 100%, min);
+    @include size(width, 100%);
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  &-case {
+    padding: 0 20px 20px 20px;
+
+    &-demo {
+      & .title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      & .demo {
+        margin-bottom: 20px;
+      }
+
+      & h2 {
+        font-size: 22px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
