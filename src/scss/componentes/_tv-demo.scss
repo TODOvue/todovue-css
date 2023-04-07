@@ -1,34 +1,92 @@
 @import "../helpers/mixins";
 @import "../helpers/variables";
+@import "../helpers/inheritance";
+
+.dark-mode {
+  & .tv-demo-select {
+      @include backgroundColorAndTextColor($color-background-card-light, $color-background-card-dark);
+      border: 1px solid $color-background-card-light;
+  }
+
+  & .tv-demo-option {
+    background: $color-background-card-light;
+  }
+}
+
+.light-mode {
+  & .tv-demo-select {
+    @include backgroundColorAndTextColor($color-background-card-dark, $color-background-card-light);
+    border: 1px solid $color-background-card-dark;
+  }
+
+  & .tv-demo-option {
+    background: $color-background-card-dark;
+  }
+}
 
 .tv-demo-body {
   @include size(height, 100vh, min);
   @include size(width, 80%);
   margin: 0 auto;
 
-  &.dark-mode {
+  & .dark-mode {
     background-color: $color-background-card-dark;
+
+    & .tv-demo-select {
+      @include backgroundColorAndTextColor($color-background-card-light, $color-background-card-dark);
+      border: 1px solid $color-background-card-light;
+    }
+
+    & .tv-demo-option {
+      background: $color-background-card-light;
+    }
   }
 
-  &.invert-dark-mode {
+  & .invert-dark-mode {
     background-color: $color-background-card-light;
+
+    & .tv-demo-select {
+      @include backgroundColorAndTextColor($color-background-card-dark, $color-background-card-light);
+      border: 1px solid $color-background-card-dark;
+    }
+
+    & .tv-demo-option {
+      background: $color-background-card-dark;
+    }
   }
 
-  &.light-mode {
+  & .light-mode {
     background-color: $color-background-card-light;
+
+    & .tv-demo-select {
+      @include backgroundColorAndTextColor($color-background-card-dark, $color-background-card-light);
+      border: 1px solid $color-background-card-dark;
+    }
+
+    & .tv-demo-option {
+      background: $color-background-card-dark;
+    }
   }
 
-  &.invert-light-mode {
+  & .invert-light-mode {
     background-color: $color-background-card-dark;
+
+    & .tv-demo-select {
+      @include backgroundColorAndTextColor($color-background-card-light, $color-background-card-dark);
+      border: 1px solid $color-background-card-light;
+    }
+
+    & .tv-demo-option {
+      background: $color-background-card-light;
+    }
   }
 
   & .tv-demo {
     &-theme {
       @include size(height, 100%, min);
       @include size(width, 100%);
-      display: flex;
-      justify-content: center;
-      padding: 20px 0;
+      display: inline-block;
+      padding: 20px;
     }
 
     &-case {
@@ -51,6 +109,35 @@
           margin-bottom: 5px;
         }
       }
+    }
+
+    &-select {
+      @include borderRadius(4px);
+      @include size(height, 40px);
+      @include size(width, 100%);
+      cursor: pointer;
+      font-size: 16px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      padding: 0 10px;
+    }
+
+    &-option {
+      font-size: 16px;
+    }
+
+    &-component {
+      @extend %alignCenterFlex;
+      @include size(full, 100%);
+      margin-top: 50px;
+    }
+
+    &-no-component {
+      color: inherit;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-top: 2rem;
+      text-align: center;
     }
   }
 }
