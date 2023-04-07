@@ -42,9 +42,9 @@
   }
 
   &.tv-btn-outlined {
-    font-weight: 600;
     background-color: transparent;
     border: 2px solid $color-background-button-dark;
+    font-weight: 600;
 
     &.tv-btn-success {
       @include backgroundColorAndTextColor(transparent, $color-background-button-success);
@@ -97,13 +97,13 @@
   }
 
   &.tv-btn-disabled {
+    box-shadow: none;
     cursor: not-allowed;
     opacity: 0.5;
-    box-shadow: none;
 
     &:active {
-      transform: none;
       background-color: $color-background-button-dark;
+      transform: none;
     }
   }
 

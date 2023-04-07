@@ -12,20 +12,18 @@
 
 @mixin defaultButton() {
   @include backgroundColorAndTextColor($color-background-button-light, $color-text-button-light);
-  @include size(width, 100px, min);
-  @include size(width, auto);
+  @include size(width, auto, wmin, 100px);
   border: none;
-  padding: 0.8rem 1.2rem;
+  box-shadow: 0 0 5px $color-background-button-dark;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
   display: inline-block;
   font-size: 14px;
-  box-shadow: 0 0 5px $color-background-button-dark;
+  padding: 0.8rem 1.2rem;
+  transition: all 0.2s ease-in-out;
 }
 
 @mixin buttonSize($min-width, $width, $padding, $font-size) {
-  @include size(width, $min-width, min);
-  @include size(width, $width);
+  @include size(width, $width, wmin, $min-width);
   font-size: $font-size;
   padding: $padding;
   white-space: nowrap;
@@ -36,8 +34,8 @@
 }
 
 @mixin defaultIconSize($size) {
-  @include size(width, $size);
   @include size(height, $size);
+  @include size(width, $size);
 }
 
 @mixin buttonText($background, $color) {
@@ -96,20 +94,38 @@
   border-radius: $border-radius;
 }
 
-@mixin size($dimension, $size, $minmax: none) {
+@mixin size($dimension, $size, $minmax: none, $sizeMin: none, $sizeMax: none) {
   @if $dimension == width {
     @if $minmax == min {
       min-width: $size;
+    } @else if $minmax == wmin {
+      width: $size;
+      min-width: $sizeMin;
+    } @else if $minmax == minmax {
+      min-width: $size;
+      max-width: $size;
     } @else if $minmax == max {
       max-width: $size;
+    } @else if $minmax == wmax {
+      width: $size;
+      max-width: $sizeMax;
     } @else {
       width: $size;
     }
   } @else if $dimension == height {
     @if $minmax == min {
       min-height: $size;
+    } @else if $minmax == hmin {
+      height: $size;
+      min-height: $sizeMin;
+    } @else if $minmax == minmax {
+      min-height: $size;
+      max-height: $size;
     } @else if $minmax == max {
       max-height: $size;
+    } @else if $minmax == hmax {
+      height: $size;
+      max-height: $sizeMax;
     } @else {
       height: $size;
     }

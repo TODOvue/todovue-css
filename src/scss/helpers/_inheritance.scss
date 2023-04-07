@@ -1,11 +1,11 @@
 %defaultIconBackground {
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 %alignCenterFlex {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
 }

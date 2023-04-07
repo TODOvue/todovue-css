@@ -24,31 +24,31 @@
 
 .tv-card-body {
   @include size(width, 350px, max);
+  align-items: center;
   background: transparent;
   display: flex;
-  align-items: center;
   justify-content: center;
   margin: 20px 0;
 
   & .tv-card {
     @extend %alignCenterFlex;
-    @include position(relative);
     @include borderRadius(0 0 20px 20px);
+    @include position(relative);
     @include size(width, 100%);
     flex-direction: column;
     margin-top: 30px;
     padding-top: 170px;
 
     &-image {
-      @include size(height, 200px);
       @include position(absolute);
+      @include size(height, 200px);
       overflow: hidden;
       top: -30px;
 
       & img {
         @include borderRadius(30px 30px 0 0);
-        @include size(width, 100%);
         @include size(height, 100%);
+        @include size(width, 100%);
         object-fit: cover;
         padding: 0 10px;
       }
@@ -61,40 +61,40 @@
       margin-top: 30px;
 
       & .tv-card-title {
-        @include position(absolute);
         @include borderRadius(30px 30px 0 0);
+        @include position(absolute);
         @include size(width, 80%);
         font-weight: 600;
-        text-transform: uppercase;
-        text-align: center;
-        top: -50px;
         padding: 10px 0;
+        text-align: center;
+        text-transform: uppercase;
+        top: -50px;
       }
 
       & .tv-card-label {
         display: flex;
-        gap: 5px;
         flex-wrap: wrap;
-        padding: 0 10px;
+        gap: 5px;
         justify-content: center;
+        padding: 0 10px;
       }
 
       & .tv-card-description {
         font-size: 12px;
-        text-align: center;
-        padding: 15px;
-        letter-spacing: 1px;
         font-weight: 300;
+        letter-spacing: 1px;
         margin-bottom: 20px;
+        padding: 15px;
+        text-align: center;
       }
     }
 
     & .tv-card-action {
       @include position(relative);
       @include size(width, 100%);
+      bottom: 20px;
       display: flex;
       justify-content: center;
-      bottom: 20px;
 
       & .tv-card-button {
         @include position(absolute);

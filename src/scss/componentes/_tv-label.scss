@@ -17,14 +17,14 @@
 .tv-label {
   @include borderRadius(100px);
   @include size(width, 50px, min);
+  cursor: pointer;
   display: inline-block;
   font-size: 10px;
   font-weight: 600;
   line-height: 1;
   padding: 4px 8px;
-  text-transform: uppercase;
-  cursor: pointer;
   text-align: center;
+  text-transform: uppercase;
 
   & i.tv-label-icon {
     @extend %defaultIconBackground;
