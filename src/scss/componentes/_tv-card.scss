@@ -47,8 +47,7 @@
 
       & img {
         @include borderRadius(30px 30px 0 0);
-        @include size(height, 100%);
-        @include size(width, 100%);
+        @include size(full, 100%);
         object-fit: cover;
         padding: 0 10px;
       }

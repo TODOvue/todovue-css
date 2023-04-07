@@ -1,0 +1,115 @@
+@import "../helpers/inheritance";
+@import "../helpers/mixins";
+@import "../helpers/variables";
+
+.dark-mode {
+  & .tv-sidebar-body {
+    & .tv-sidebar-title {
+      h1 {
+        @include backgroundColorAndTextColor($color-background-card-dark, $color-text-dark);
+      }
+
+      & .tv-sidebar-title-separator {
+        background: $color-background-card-dark;
+      }
+    }
+    & .tv-sidebar-content-li {
+      span {
+        color: $color-background-card-dark;
+      }
+    }
+  }
+}
+
+.light-mode {
+  & .tv-sidebar-body {
+    & .tv-sidebar-title {
+      h1 {
+        @include backgroundColorAndTextColor($color-background-card-light, $color-text-light);
+      }
+
+      & .tv-sidebar-title-separator {
+        background: $color-background-card-light;
+      }
+    }
+    & .tv-sidebar-content-li {
+      span {
+        color: $color-background-card-light;
+      }
+    }
+  }
+}
+
+.tv-sidebar-body {
+  @include size(full, 100%);
+  display: inline-flex;
+  overflow: hidden;
+
+  & .tv-sidebar {
+    &-title {
+      @include position(relative);
+      @include size(height, 35px, min);
+      margin: 10px 0 20px 0;
+
+      h1 {
+        display: inline;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px 20px;
+        white-space: nowrap;
+      }
+
+      & .tv-sidebar-title-separator {
+        @include position(absolute);
+        @include size(height, 5px);
+        @include size(width, 100vw);
+        display: block;
+        left: 0;
+        margin-top: 10px;
+      }
+    }
+
+    & .tv-sidebar-content {
+      &-ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      &-li {
+        align-items: center;
+        display: flex;
+        font-size: 16px;
+
+        &:first-of-type {
+          margin-top: 10px;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+
+        span {
+          font-size: 34px;
+          margin-right: 10px;
+        }
+      }
+
+      &-label {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 10px;
+      }
+    }
+
+    & .pointer {
+      cursor: pointer;
+    }
+
+    img {
+      @include size(full, 100%);
+      object-fit: cover;
+    }
+  }
+}

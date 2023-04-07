@@ -34,8 +34,7 @@
 }
 
 @mixin defaultIconSize($size) {
-  @include size(height, $size);
-  @include size(width, $size);
+  @include size(full, $size);
 }
 
 @mixin buttonText($background, $color) {
@@ -129,6 +128,9 @@
     } @else {
       height: $size;
     }
+  } @else if $dimension == full {
+    height: $size;
+    width: $size;
   } @else {
     @error "Invalid dimension specified. Please use 'width' or 'height'.";
   }
