@@ -29,7 +29,7 @@
   @include size(width, 80%);
   margin: 0 auto;
 
-  & .dark-mode {
+  &.dark-mode {
     background-color: $color-background-card-dark;
 
     & .tv-demo-select {
@@ -42,7 +42,7 @@
     }
   }
 
-  & .invert-dark-mode {
+  &.invert-dark-mode {
     background-color: $color-background-card-light;
 
     & .tv-demo-select {
@@ -55,7 +55,7 @@
     }
   }
 
-  & .light-mode {
+  &.light-mode {
     background-color: $color-background-card-light;
 
     & .tv-demo-select {
@@ -68,7 +68,7 @@
     }
   }
 
-  & .invert-light-mode {
+  &.invert-light-mode {
     background-color: $color-background-card-dark;
 
     & .tv-demo-select {
