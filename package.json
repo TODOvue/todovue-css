@@ -1,5 +1,6 @@
 {
   "name": "todovue-css",
+  "main": "dist/todovue.css",
   "version": "0.1.0",
   "private": false,
   "author": "Cristhian Daza",
