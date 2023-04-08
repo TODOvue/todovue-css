@@ -131,6 +131,14 @@
           font-size: 12px;
         }
       }
+
+      &-full {
+        padding: 30px;
+      }
+
+      &.tv-hero-full {
+        @include size(width, 80%);
+      }
     }
 
     &.tv-hero-entry {
