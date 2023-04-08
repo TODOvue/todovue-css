@@ -82,6 +82,14 @@
         justify-content: center;
       }
     }
+
+    &-full {
+      padding: 30px !important;
+    }
+
+    &.tv-hero-full {
+      width: 80% !important;
+    }
   }
 
   &.tv-hero-entry {
@@ -130,14 +138,6 @@
         & .tv-hero-description {
           font-size: 12px;
         }
-      }
-
-      &-full {
-        padding: 30px !important;
-      }
-
-      &.tv-hero-full {
-        width: 80% !important;
       }
     }
 
