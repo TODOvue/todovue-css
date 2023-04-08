@@ -35,13 +35,13 @@
   margin: 0 auto;
 
   & .tv-hero {
-    @include size(width, 90%);
+    @include size(width, 70%);
     display: flex;
     padding: 40px 0;
 
     & .tv-hero-image {
       @extend %alignCenterFlex;
-      @include size(width, 40%);
+      @include size(width, 30%);
       margin-right: 2rem;
 
       & img {
@@ -57,6 +57,8 @@
       & .tv-hero-title {
         margin-bottom: 1.5rem;
         text-align: center;
+        font-size: 26px;
+        font-weight: 800;
 
         &::after {
           @include size(height, 3px);
@@ -169,7 +171,7 @@
         @include size(width, 100%);
 
         & .tv-hero-description {
-          padding: 10px 50px;
+          padding: 10px;
         }
       }
     }
@@ -206,7 +208,7 @@
       & .tv-hero-content {
         & .tv-hero-description {
           margin: 0;
-          padding: 20px 10px;
+          padding: 10px;
         }
       }
     }
