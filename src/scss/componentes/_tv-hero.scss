@@ -133,11 +133,11 @@
       }
 
       &-full {
-        padding: 30px;
+        padding: 30px !important;
       }
 
       &.tv-hero-full {
-        @include size(width, 80%);
+        width: 80% !important;
       }
     }
 
