@@ -20,6 +20,16 @@ h1, h2, h3, h4, h5, h6 {
   & body {
     @include backgroundColorAndTextColor($color-background-body-dark, $color-text-dark);
   }
+
+  & .tv-search-results {
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-background-card-dark;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: darken($color-background-card-dark, 10%);
+    }
+  }
 }
 
 .light-mode {
@@ -27,31 +37,30 @@ h1, h2, h3, h4, h5, h6 {
   & body {
     @include backgroundColorAndTextColor($color-background-body-light, $color-text-light);
   }
+
+  & .tv-search-results {
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-background-card-light;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: darken($color-background-card-light, 10%);
+    }
+  }
+
 }
 
-.tv-icon-position-left {
-  @include floatIcon(left, right, 8px);
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: $color-text-button-light;
 }
 
-.tv-icon-position-right {
-  @include floatIcon(right, left, 8px);
+::-webkit-scrollbar-thumb {
+  background-color: $color-background-card-light;
 }
 
-.tv-icon-add {
-  @include defaultIcon($icon-add);
-}
-.tv-icon-arrow-left {
-  @include defaultIcon($icon-arrow-left);
-}
-.tv-icon-arrow-right {
-  @include defaultIcon($icon-arrow-right);
-}
-.tv-icon-edit {
-  @include defaultIcon($icon-edit);
-}
-.tv-icon-remove {
-  @include defaultIcon($icon-remove);
-}
-.tv-icon-search {
-  @include defaultIcon($icon-search);
+::-webkit-scrollbar-thumb:hover {
+  background-color: darken($color-background-card-light, 10%);
 }

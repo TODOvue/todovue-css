@@ -12,7 +12,7 @@
 
 @mixin defaultButton() {
   @include backgroundColorAndTextColor($color-background-button-light, $color-text-button-light);
-  @include size(width, auto, wmin, 100px);
+  @include size(width, auto, wmin, 110px);
   border: none;
   box-shadow: 0 0 5px $color-background-button-dark;
   cursor: pointer;
@@ -133,5 +133,17 @@
     width: $size;
   } @else {
     @error "Invalid dimension specified. Please use 'width' or 'height'.";
+  }
+}
+
+@mixin cursor($type) {
+  cursor: $type;
+}
+
+@mixin border-radius($type, $direction: '') {
+  @if $direction == '' {
+    border-radius: map-get($border-radius-map, $type) !important;
+  } @else {
+    #{$direction}-radius: map-get($border-radius-map, $type) !important;
   }
 }

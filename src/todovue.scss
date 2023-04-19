@@ -1,4 +1,6 @@
 // helpers
+@import "scss/helpers/base";
+@import "scss/helpers/bucles";
 @import 'scss/helpers/global';
 @import 'scss/helpers/inheritance';
 @import 'scss/helpers/mixins';
@@ -10,4 +12,5 @@
 @import "scss/componentes/tv-demo";
 @import "scss/componentes/tv-hero";
 @import "scss/componentes/tv-label";
+@import "scss/componentes/tv-search";
 @import "scss/componentes/tv-sidebar";

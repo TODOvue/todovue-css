@@ -1,0 +1,221 @@
+@import "inheritance";
+@import "mixins";
+@import "variables";
+
+.tv-icon {
+  @extend %defaultIconBackground;
+  @include defaultIconSize(18px);
+}
+
+.tv-cursor {
+  @include cursor(default);
+
+  &-pointer {
+    @include cursor(pointer);
+  }
+
+  &-not-allowed {
+    @include cursor(not-allowed);
+  }
+
+  &-text {
+    @include cursor(text);
+  }
+
+  &-wait {
+    @include cursor(wait);
+  }
+
+  &-help {
+    @include cursor(help);
+  }
+
+  &-move {
+    @include cursor(move);
+  }
+
+  &-crosshair {
+    @include cursor(crosshair);
+    }
+
+  &-zoom-in {
+    @include cursor(zoom-in);
+  }
+
+  &-zoom-out {
+    @include cursor(zoom-out);
+  }
+
+  &-grab {
+    @include cursor(grab);
+  }
+
+  &-grabbing {
+    @include cursor(grabbing);
+  }
+
+  &-col-resize {
+    @include cursor(col-resize);
+  }
+
+  &-row-resize {
+    @include cursor(row-resize);
+  }
+
+  &-n-resize {
+    @include cursor(n-resize);
+  }
+
+  &-e-resize {
+    @include cursor(e-resize);
+  }
+
+  &-s-resize {
+    @include cursor(s-resize);
+  }
+
+  &-w-resize {
+    @include cursor(w-resize);
+  }
+
+  &-ne-resize {
+    @include cursor(ne-resize);
+  }
+
+  &-nw-resize {
+    @include cursor(nw-resize);
+  }
+
+  &-se-resize {
+    @include cursor(se-resize);
+  }
+
+  &-sw-resize {
+    @include cursor(sw-resize);
+  }
+
+  &-ew-resize {
+    @include cursor(ew-resize);
+  }
+
+  &-ns-resize {
+    @include cursor(ns-resize);
+  }
+
+  &-nesw-resize {
+    @include cursor(nesw-resize);
+  }
+
+  &-nwse-resize {
+    @include cursor(nwse-resize);
+  }
+
+  &-no-drop {
+    @include cursor(no-drop);
+  }
+
+  &-copy {
+    @include cursor(copy);
+  }
+
+  &-alias {
+    @include cursor(alias);
+  }
+
+  &-context-menu {
+    @include cursor(context-menu);
+  }
+
+  &-cell {
+    @include cursor(cell);
+  }
+
+
+  &-vertical-text {
+    @include cursor(vertical-text);
+  }
+
+  &-all-scroll {
+    @include cursor(all-scroll);
+  }
+
+  &-progress {
+    @include cursor(progress);
+  }
+
+  &-none {
+    @include cursor(none);
+  }
+
+  &-default {
+    @include cursor(default);
+  }
+}
+
+
+.tv-icon-position-left {
+  @include floatIcon(left, right, 8px);
+}
+
+.tv-icon-position-right {
+  @include floatIcon(right, left, 8px);
+}
+
+.tv-icon-account {
+  @include defaultIcon($icon-account);
+}
+.tv-icon-alert {
+  @include defaultIcon($icon-alert);
+}
+.tv-icon-arrow-down {
+  @include defaultIcon($icon-arrow-down);
+}
+.tv-icon-arrow-left {
+  @include defaultIcon($icon-arrow-left);
+}
+.tv-icon-arrow-right {
+  @include defaultIcon($icon-arrow-right);
+}
+.tv-icon-arrow-up {
+  @include defaultIcon($icon-arrow-up);
+}
+.tv-icon-cancel {
+  @include defaultIcon($icon-cancel);
+}
+.tv-icon-edit {
+  @include defaultIcon($icon-edit);
+}
+.tv-icon-favorite {
+  @include defaultIcon($icon-favorite);
+}
+.tv-icon-help {
+  @include defaultIcon($icon-help);
+}
+.tv-icon-menu {
+  @include defaultIcon($icon-menu);
+}
+.tv-icon-minus {
+  @include defaultIcon($icon-minus);
+}
+.tv-icon-plus {
+  @include defaultIcon($icon-plus);
+}
+.tv-icon-remove {
+  @include defaultIcon($icon-remove);
+}
+.tv-icon-search {
+  @include defaultIcon($icon-search);
+}
+.tv-icon-search-light {
+  @include defaultIcon($icon-search-light);
+}
+.tv-icon-settings {
+  @include defaultIcon($icon-settings);
+}
+.tv-icon-share {
+  @include defaultIcon($icon-share);
+}
+.tv-icon-star {
+  @include defaultIcon($icon-star);
+}
+

@@ -1,0 +1,107 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+@import "../helpers/inheritance";
+
+.dark-mode {
+  & .tv-search {
+    & .tv-search-icon {
+      @include defaultIcon($icon-search-light);
+      border: 2px solid $color-background-card-light;
+    }
+  }
+  & .tv-search-modal {
+    background-color: rgba($color-background-card-dark, 0.9);
+
+    & .tv-search-modal-content {
+      background-color: $color-background-card-light;
+      box-shadow: 0 0 15px 0 $color-background-card-light;
+    }
+  }
+}
+
+.light-mode {
+  & .tv-search {
+    & .tv-search-icon {
+      border: 2px solid $color-background-card-dark;
+      @include defaultIcon($icon-search);
+    }
+  }
+
+  & .tv-search-modal {
+    background-color: rgba($color-background-card-light, 0.9);
+    & .tv-search-modal-content {
+      background-color: $color-background-card-dark;
+      box-shadow: 0 0 15px 0 $color-background-card-dark;
+    }
+  }
+}
+
+.tv-search {
+  & .tv-search-icon {
+    @include size(full, 24px);
+    display: inline-block;
+    padding: 15px;
+  }
+}
+
+.tv-search-modal {
+  @include position(fixed);
+  @include size(full, 100%);
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 100px;
+
+  & .tv-search-modal-content {
+    @include size(width, 550px);
+    border-radius: 5px;
+    padding: 20px;
+
+    & .tv-search-input {
+      @include size(width, 100%);
+      @include size(height, 44px);
+      border-radius: 10px 0 0 10px;
+      border: none;
+      font-size: 16px;
+      outline: none;
+      padding: 10px;
+    }
+
+    & .tv-btn {
+      border-radius: 0 10px 10px 0;
+    }
+
+    & .tv-search-modal-content-input {
+      display: flex;
+    }
+
+    & .tv-search-results {
+      @include size(width, 100%, wmin, 300px);
+      @include size(width, 300px, min);
+      @include size(height, 200px, max);
+      background: #fff;
+      border-radius: 0 0 10px 10px;
+      overflow-y: auto;
+      display: inline-block;
+      color: $color-background-card-dark;
+      transition: all 0.3s ease;
+    }
+
+    & .tv-search-results-title {
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.7rem 1rem;
+
+      &:hover {
+        background: rgba($color-background-card-dark, 0.2);
+      }
+
+      &:active {
+        background: rgba($color-background-card-dark, 0.4);
+      }
+    }
+  }
+}

@@ -27,7 +27,6 @@
   text-transform: uppercase;
 
   & i.tv-label-icon {
-    @extend %defaultIconBackground;
     @include defaultIconSize(10px);
   }
 }

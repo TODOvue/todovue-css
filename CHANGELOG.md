@@ -1,5 +1,15 @@
 # Changelog **TODOvue CSS**
 
+## v1.3.0
+### Features
+* Classes are added for the `padding`
+* Classes are added for the `margin`
+* Added the css styles for the `todovue-search` component
+* Added icons
+### Fixes
+* The margins of the `todovue-demo` component are changed
+* The default icon background is removed from the `todovue-label` component
+
 ## v1.2.4
 ### Fixes
 * Added missing styles of `todovue-hero` component

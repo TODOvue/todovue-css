@@ -129,7 +129,7 @@
     &-component {
       @extend %alignCenterFlex;
       @include size(full, 100%);
-      margin-top: 50px;
+      margin-top: 5px;
     }
 
     &-no-component {
@@ -141,7 +141,7 @@
     }
 
     &-code {
-      margin-top: 50px;
+      margin-top: 20px;
       width: 100% !important;
       height: auto !important;
       padding: 20px 0;

@@ -1,0 +1,120 @@
+@import "variables";
+@import "mixins";
+
+.tv-radius {
+  @each $type, $value in $border-radius-map {
+    &-#{$type} {
+      @include border-radius($type);
+      @include border-radius($type, 'border-start-start');
+      @include border-radius($type, 'border-start-end');
+      @include border-radius($type, 'border-end-start');
+      @include border-radius($type, 'border-end-end');
+      @include border-radius($type, 'border-top-left');
+      @include border-radius($type, 'border-top-right');
+      @include border-radius($type, 'border-bottom-left');
+      @include border-radius($type, 'border-bottom-right');
+
+      &-r {
+        @include border-radius($type, 'border-top-right');
+        @include border-radius($type, 'border-bottom-right');
+      }
+
+      &-l {
+        @include border-radius($type, 'border-top-left');
+        @include border-radius($type, 'border-bottom-left');
+      }
+
+      &-t {
+        @include border-radius($type, 'border-top-left');
+        @include border-radius($type, 'border-top-right');
+      }
+
+      &-b {
+        @include border-radius($type, 'border-bottom-left');
+        @include border-radius($type, 'border-bottom-right');
+      }
+
+      &-tl {
+        @include border-radius($type, 'border-top-left');
+      }
+
+      &-tr {
+        @include border-radius($type, 'border-top-right');
+      }
+
+      &-bl {
+        @include border-radius($type, 'border-bottom-left');
+      }
+
+      &-br {
+        @include border-radius($type, 'border-bottom-right');
+      }
+    }
+  }
+}
+
+.tv-cursor {
+  @include cursor(default);
+
+  @each $class, $cursor in $cursor-types {
+    &-#{$class} {
+      @include cursor($cursor);
+    }
+  }
+}
+
+
+.tv {
+  @each $size, $value in $sizes {
+    @if $size == "auto" {
+      &-m-auto { margin: auto !important; }
+      &-mx-auto { margin-left: auto !important; margin-right: auto !important; }
+      &-my-auto { margin-top: auto !important; margin-bottom: auto !important; }
+      &-ms-auto { margin-inline-start: auto !important; }
+      &-me-auto { margin-inline-end: auto !important; }
+      &-mt-auto { margin-top: auto !important; }
+      &-mr-auto { margin-right: auto !important; }
+      &-mb-auto { margin-bottom: auto !important; }
+      &-ml-auto { margin-left: auto !important; }
+    }
+    @if $value != "auto" {
+      &-m-#{$size} { margin: $value !important; }
+      &-mx-#{$size} {
+        margin-left: $value !important;
+        margin-right: $value !important;
+      }
+      &-my-#{$size} {
+        margin-top: $value !important;
+        margin-bottom: $value !important;
+      }
+      &-ms-#{$size} { margin-inline-start: $value !important; }
+      &-me-#{$size} { margin-inline-end: $value !important; }
+      &-mt-#{$size} { margin-top: $value !important; }
+      &-mr-#{$size} { margin-right: $value !important; }
+      &-mb-#{$size} { margin-bottom: $value !important; }
+      &-ml-#{$size} { margin-left: $value !important; }
+    }
+  }
+}
+
+.tv {
+  @each $size, $value in $sizes {
+    @if $value != "auto" {
+      &-p-#{$size} { margin: $value !important; }
+      &-px-#{$size} {
+        margin-left: $value !important;
+        margin-right: $value !important;
+      }
+      &-py-#{$size} {
+        margin-top: $value !important;
+        margin-bottom: $value !important;
+      }
+      &-ps-#{$size} { margin-inline-start: $value !important; }
+      &-pe-#{$size} { margin-inline-end: $value !important; }
+      &-pt-#{$size} { margin-top: $value !important; }
+      &-pr-#{$size} { margin-right: $value !important; }
+      &-pb-#{$size} { margin-bottom: $value !important; }
+      &-pl-#{$size} { margin-left: $value !important; }
+    }
+  }
+}
