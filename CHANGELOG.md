@@ -1,5 +1,15 @@
 # Changelog **TODOvue CSS**
 
+## v1.4.0
+### Features
+* New styles are added to the `todovue-modal` component
+* Animations are added
+* The variables of the images are added to the modal
+### Fixes
+* The `_tv-search.scss` classes are ordered
+* Removed cursor classes in `_base.css` due to duplication
+* The icon classes are added through the loop
+
 ## v1.3.0
 ### Features
 * Classes are added for the `padding`

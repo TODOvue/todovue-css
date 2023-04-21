@@ -118,3 +118,19 @@
     }
   }
 }
+
+.tv-modal {
+  @each $class, $image in $modal-images {
+    &-#{$class} {
+      @include modalImg($image);
+    }
+  }
+}
+
+.tv {
+  @each $class, $icon in $icons {
+    &-#{$class} {
+      @include defaultIcon($icon);
+    }
+  }
+}

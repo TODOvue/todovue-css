@@ -147,3 +147,7 @@
     #{$direction}-radius: map-get($border-radius-map, $type) !important;
   }
 }
+
+@mixin modalImg($url) {
+  background-image: url($url);
+}

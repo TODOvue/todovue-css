@@ -1,0 +1,56 @@
+.tv-animation-rotate {
+  animation: tv-animation-rotate 0.5s linear both;
+}
+
+.tv-animation-scale-dw {
+  animation: tv-animation-scale-dw 0.1s;
+}
+
+.tv-animation-scale-up {
+  animation: tv-animation-scale-up 0.1s;
+}
+
+@keyframes tv-animation-rotate {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+  10% {
+    transform: rotate(1deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-2deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(2deg);
+  }
+  80% {
+    transform: rotate(-1deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes tv-animation-scale-dw {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes tv-animation-scale-up {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

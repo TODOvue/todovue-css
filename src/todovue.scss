@@ -1,4 +1,5 @@
 // helpers
+@import "scss/helpers/animations";
 @import "scss/helpers/base";
 @import "scss/helpers/bucles";
 @import 'scss/helpers/global';
@@ -12,5 +13,6 @@
 @import "scss/componentes/tv-demo";
 @import "scss/componentes/tv-hero";
 @import "scss/componentes/tv-label";
+@import "scss/componentes/tv-modal";
 @import "scss/componentes/tv-search";
 @import "scss/componentes/tv-sidebar";
