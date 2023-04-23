@@ -1,0 +1,37 @@
+@import "../helpers/mixins";
+@import "../helpers/inheritance";
+
+.tv-menu-container {
+  @include size(height, 100%);
+  @include size(width, 70%);
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .tv-menu {
+    &-image {
+      padding: 10px 0;
+
+      & img {
+        width: 5rem;
+      }
+    }
+
+    &-items {
+      @include size(height, 100%);
+      @include size(width, 50%);
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &-item {
+      @extend %alignCenterFlex;
+      @include size(full, 100%);
+      flex-direction: row;
+      padding: 5px 0;
+    }
+  }
+}

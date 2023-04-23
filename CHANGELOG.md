@@ -1,5 +1,11 @@
 # Changelog **TODOvue CSS**
 
+## v1.5.0
+### Features
+* New styles are added to the `todovue-menu` component
+### Fixes
+* The icons for the search engine are corrected
+
 ## v1.4.0
 ### Features
 * New styles are added to the `todovue-modal` component
