@@ -1,4 +1,8 @@
 # Changelog **TODOvue CSS**
+## v1.6.0
+### Features
+* The styles for mobile of the `todovue-menu` component are added
+* Close and menu icons are added
 
 ## v1.5.0
 ### Features
