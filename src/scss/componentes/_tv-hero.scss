@@ -82,14 +82,6 @@
         justify-content: center;
       }
     }
-
-    &-full {
-      padding: 30px !important;
-    }
-
-    &.tv-hero-full {
-      width: 80% !important;
-    }
   }
 
   &.tv-hero-entry {
@@ -132,11 +124,11 @@
 
       & .tv-hero-content {
         & .tv-hero-title {
-          font-size: 14px;
+          font-size: 20px;
         }
 
         & .tv-hero-description {
-          font-size: 12px;
+          font-size: 18px;
         }
       }
     }
@@ -162,14 +154,14 @@
   }
 }
 
-@media (max-width: 612px) {
+@media (max-width: 640px) {
   .tv-hero-body {
     & .tv-hero {
       @include size(width, 100%, wmax, 0, 100%);
       align-items: center;
       flex-direction: column;
 
-      & .tv-hero-image {
+      &-image {
         @include size(width, 60%);
         margin-bottom: 2rem;
         margin-right: 0;
@@ -179,44 +171,11 @@
         @include size(width, 100%);
 
         & .tv-hero-description {
-          padding: 10px;
+          font-size: 16px;
         }
-      }
-    }
-  }
-}
 
-@media (max-width: 425px) {
-  .tv-hero-body {
-    & .tv-hero {
-      @include size(width, 100%);
-      padding: 20px 0 10px 0;
-
-      & .tv-hero-content {
         & .tv-hero-title {
-          font-size: 12px;
-          margin: 0;
-          padding: 0 10px;
-        }
-
-        & .tv-hero-actions {
-          align-items: center;
-          flex-direction: column;
-          gap: 10px;
-          padding: 5px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 325px) {
-  .tv-hero-body {
-    & .tv-hero {
-      & .tv-hero-content {
-        & .tv-hero-description {
-          margin: 0;
-          padding: 10px;
+          font-size: 18px;
         }
       }
     }

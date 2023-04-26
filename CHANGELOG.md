@@ -1,4 +1,10 @@
 # Changelog **TODOvue CSS**
+## v1.7.0
+### Features
+* Responsive styles are added for the `todovue-demo` component
+* Responsive styles are added for the `todovue-menu` component
+* Responsive styles are added for the `todovue-hero` component
+
 ## v1.6.0
 ### Features
 * The styles for mobile of the `todovue-menu` component are added

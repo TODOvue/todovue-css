@@ -112,7 +112,7 @@
 
 @media (max-width: 768px) {
   .tv-menu-container {
-    @include size(width, 100%);
+    @include size(width, 95%);
     flex-direction: column;
     justify-content: center;
     margin: 0;
@@ -136,7 +136,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 640px) {
   .tv-menu-container {
     flex-direction: row;
 

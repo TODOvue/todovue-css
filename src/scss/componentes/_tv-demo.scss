@@ -148,3 +148,25 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .tv-demo {
+    &-case {
+      padding: 0 10px 10px 10px !important;
+    }
+    &-body {
+      @include size(width, 90%);
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .tv-demo {
+    &-case {
+      padding: 0 !important;
+    }
+    &-body {
+      @include size(width, 100%);
+    }
+  }
+}
