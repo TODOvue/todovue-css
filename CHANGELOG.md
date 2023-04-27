@@ -1,4 +1,10 @@
 # Changelog **TODOvue CSS**
+
+## v1.8.0
+### Features
+* New styles are added to the `todovue-theme-button` component
+* Icons for theme (dark/light) are added
+
 ## v1.7.0
 ### Features
 * Responsive styles are added for the `todovue-demo` component
